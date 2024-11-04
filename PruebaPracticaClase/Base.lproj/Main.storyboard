@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="F4a-Pa-1y6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Rh6-tW-peF">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -20,17 +20,30 @@
                                 <rect key="frame" x="0.0" y="336" width="414" height="561"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PerfilFoto" translatesAutoresizingMaskIntoConstraints="NO" id="0ym-gJ-lxR">
+                                <rect key="frame" x="111" y="128" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="FZd-YG-hKG"/>
+                                    <constraint firstAttribute="width" constant="200" id="VaB-eh-l6A"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2Gb-Kc-0Hy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="nCB-O9-cMM" firstAttribute="top" secondItem="2Gb-Kc-0Hy" secondAttribute="top" constant="248" id="70T-CG-HjH"/>
+                            <constraint firstItem="nCB-O9-cMM" firstAttribute="top" secondItem="0ym-gJ-lxR" secondAttribute="bottom" constant="8" id="Cz2-Hr-bZa"/>
                             <constraint firstItem="2Gb-Kc-0Hy" firstAttribute="bottom" secondItem="nCB-O9-cMM" secondAttribute="bottom" constant="-35" id="GUT-e1-kXQ"/>
                             <constraint firstItem="2Gb-Kc-0Hy" firstAttribute="trailing" secondItem="nCB-O9-cMM" secondAttribute="trailing" id="M9Q-Qx-ddv"/>
+                            <constraint firstItem="0ym-gJ-lxR" firstAttribute="leading" secondItem="2Gb-Kc-0Hy" secondAttribute="leading" constant="111" id="go4-Hn-Ocv"/>
                             <constraint firstItem="nCB-O9-cMM" firstAttribute="leading" secondItem="2Gb-Kc-0Hy" secondAttribute="leading" id="tHq-0Y-LPm"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vvN-TY-AJA"/>
+                    <connections>
+                        <outlet property="logoFotoView" destination="0ym-gJ-lxR" id="yFM-gO-dQ0"/>
+                        <outlet property="tableView" destination="nCB-O9-cMM" id="ArT-1Q-pR1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C8k-7l-Ja6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -329,6 +342,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="PerfilFoto" width="275" height="183"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
