@@ -8,39 +8,38 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
-        <scene sceneID="lQn-8b-auY">
+        <!--Main View Controller-->
+        <scene sceneID="G9N-TK-2Ti">
             <objects>
-                <tableViewController id="sLK-y0-4h6" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="lyU-FU-aM3">
+                <viewController storyboardIdentifier="MainViewController" id="Rh6-tW-peF" customClass="MainViewController" customModule="PruebaPracticaClase" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Luj-cH-hDy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="nCB-O9-cMM">
+                                <rect key="frame" x="0.0" y="336" width="414" height="561"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2Gb-Kc-0Hy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="vYq-3z-ufJ">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vYq-3z-ufJ" id="5Lw-s2-ZrD">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="sLK-y0-4h6" id="EJe-LE-u0j"/>
-                            <outlet property="delegate" destination="sLK-y0-4h6" id="leu-d2-Wdn"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="vOu-HM-Nnq"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3KW-7j-RmJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <constraints>
+                            <constraint firstItem="nCB-O9-cMM" firstAttribute="top" secondItem="2Gb-Kc-0Hy" secondAttribute="top" constant="248" id="70T-CG-HjH"/>
+                            <constraint firstItem="2Gb-Kc-0Hy" firstAttribute="bottom" secondItem="nCB-O9-cMM" secondAttribute="bottom" constant="-35" id="GUT-e1-kXQ"/>
+                            <constraint firstItem="2Gb-Kc-0Hy" firstAttribute="trailing" secondItem="nCB-O9-cMM" secondAttribute="trailing" id="M9Q-Qx-ddv"/>
+                            <constraint firstItem="nCB-O9-cMM" firstAttribute="leading" secondItem="2Gb-Kc-0Hy" secondAttribute="leading" id="tHq-0Y-LPm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="vvN-TY-AJA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C8k-7l-Ja6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="988" y="46"/>
+            <point key="canvasLocation" x="911.59420289855075" y="45.535714285714285"/>
         </scene>
-        <!--View Controller-->
+        <!--RegisterView-->
         <scene sceneID="dge-dL-PMM">
             <objects>
-                <viewController id="llD-l3-G4z" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterViewController" id="llD-l3-G4z" userLabel="RegisterView" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EaS-M0-7R1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -206,10 +205,10 @@
             </objects>
             <point key="canvasLocation" x="-901" y="46"/>
         </scene>
-        <!--View Controller-->
+        <!--LoginView-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PruebaPracticaClase" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" userLabel="LoginView" customClass="LoginViewController" customModule="PruebaPracticaClase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -318,9 +317,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="VaF-nc-o7a"/>
                     <connections>
+                        <outlet property="loginButton" destination="ArM-HY-qE7" id="vRH-lJ-Ujw"/>
                         <outlet property="passwordTextField" destination="Xgi-5Y-xY5" id="Brr-MF-vj6"/>
                         <outlet property="userTextField" destination="nLv-6z-1Zp" id="A93-yE-bcL"/>
-                        <segue destination="sLK-y0-4h6" kind="show" id="Nht-dj-QOI"/>
+                        <segue destination="Rh6-tW-peF" kind="show" identifier="goToMainView" id="0wM-GA-Lbm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
