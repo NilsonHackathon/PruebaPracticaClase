@@ -9,6 +9,8 @@ import UIKit
 
 class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    var users: [User] = []
+    
     var items: [Item] = [
         Item(text: "Item 1", imageName: "image1"),
         Item(text: "Item 2", imageName: "image2"),
@@ -20,6 +22,8 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var mainViewLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,6 +31,10 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         //Redondear foto del logo
         logoFotoView.layer.cornerRadius = logoFotoView.bounds.height / 2
                 logoFotoView.clipsToBounds = true
+        
+        // Configura el identificador de accesibilidad en el UILabel para verificar la vista principal
+        mainViewLabel.text = "Bienvenido a la vista principal"
+        mainViewLabel.accessibilityIdentifier = "MainViewLabelIdentifier"
         
         // Configura el identificador de accesibilidad en la vista principal
         view.accessibilityIdentifier = "mainView"
@@ -48,12 +56,18 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // Configuración de identificadores de accesibilidad
             logoFotoView.accessibilityIdentifier = "logoFotoView"
             tableView.accessibilityIdentifier = "tableView"
+
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "customTableVC", for: indexPath) as? CustomTableViewCell else {
                 return UITableViewCell()
             }
+        
+        let user = users[indexPath.row]
+        cell.labelText.text = user.name
+        cell.fotoView.image = UIImage(systemName: "person.circle")
+        return cell
             
             let item = items[indexPath.row]
             cell.labelText.text = item.text

@@ -21,6 +21,8 @@
 		77A2304A2CD92AF2001E3C97 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A230482CD92AF2001E3C97 /* CustomTableViewCell.swift */; };
 		77A2304B2CD92AF2001E3C97 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77A230492CD92AF2001E3C97 /* CustomTableViewCell.xib */; };
 		77A2304D2CD97048001E3C97 /* UIMainViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A2304C2CD97048001E3C97 /* UIMainViewControllerTest.swift */; };
+		77A2304F2CDA9385001E3C97 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A2304E2CDA9385001E3C97 /* RegisterViewController.swift */; };
+		77A230512CDEA640001E3C97 /* UIRegisterViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A230502CDEA640001E3C97 /* UIRegisterViewControllerTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		77A230482CD92AF2001E3C97 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		77A230492CD92AF2001E3C97 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		77A2304C2CD97048001E3C97 /* UIMainViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIMainViewControllerTest.swift; sourceTree = "<group>"; };
+		77A2304E2CDA9385001E3C97 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		77A230502CDEA640001E3C97 /* UIRegisterViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRegisterViewControllerTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +135,7 @@
 		776887AC2CD34B4100879221 /* PruebaPracticaClaseUITests */ = {
 			isa = PBXGroup;
 			children = (
+				77A230502CDEA640001E3C97 /* UIRegisterViewControllerTest.swift */,
 				77A2304C2CD97048001E3C97 /* UIMainViewControllerTest.swift */,
 				77A2303C2CD85804001E3C97 /* UILoginTest.swift */,
 				776887AD2CD34B4100879221 /* PruebaPracticaClaseUITests.swift */,
@@ -169,6 +174,7 @@
 		77A230412CD85D91001E3C97 /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				77A2304E2CDA9385001E3C97 /* RegisterViewController.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -317,6 +323,7 @@
 				776887912CD34B4100879221 /* LoginViewController.swift in Sources */,
 				77A2304A2CD92AF2001E3C97 /* CustomTableViewCell.swift in Sources */,
 				77A230432CD85DB2001E3C97 /* MainViewController.swift in Sources */,
+				77A2304F2CDA9385001E3C97 /* RegisterViewController.swift in Sources */,
 				7768878D2CD34B4100879221 /* AppDelegate.swift in Sources */,
 				7768878F2CD34B4100879221 /* SceneDelegate.swift in Sources */,
 			);
@@ -336,6 +343,7 @@
 			files = (
 				77A230462CD888D3001E3C97 /* UILoginTest.swift in Sources */,
 				776887AE2CD34B4100879221 /* PruebaPracticaClaseUITests.swift in Sources */,
+				77A230512CDEA640001E3C97 /* UIRegisterViewControllerTest.swift in Sources */,
 				776887B02CD34B4100879221 /* PruebaPracticaClaseUITestsLaunchTests.swift in Sources */,
 				77A2304D2CD97048001E3C97 /* UIMainViewControllerTest.swift in Sources */,
 			);

@@ -13,6 +13,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var userTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var registerButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,7 @@ class LoginViewController: UIViewController {
         userTextField.accessibilityIdentifier = "userTextField"
         passwordTextField.accessibilityIdentifier = "passwordTextField"
         loginButton.accessibilityIdentifier = "loginButton"
+        registerButton.accessibilityIdentifier = "registerButtonOnLogin"
     }
     
     func authenticateUser(username: String, password: String) -> Bool {
@@ -47,6 +49,15 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func RegisterButtonAction(_ sender: Any) {
+        //Navegamos a RegisterVC usando el identificador.
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        guard let registerVC = storyBoard.instantiateViewController(withIdentifier: "RegisterViewController") as? RegisterViewController
+        else {
+            print("No se encontró el RegisterViewController")
+            return
+        }
+        
+        self.present(registerVC, animated: true, completion: nil)
     }
 }
 
