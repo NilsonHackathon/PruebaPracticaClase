@@ -14,7 +14,10 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var items: [Item] = [
         Item(text: "Item 1", imageName: "image1"),
         Item(text: "Item 2", imageName: "image2"),
-        Item(text: "Item 3", imageName: "image3")
+        Item(text: "Item 3", imageName: "image3"),
+        Item(text: "Item 4", imageName: "image4"),
+        Item(text: "Item 5", imageName: "image5"),
+        Item(text: "Item 6", imageName: "image6")
     ]
     
     
@@ -63,24 +66,19 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "customTableVC", for: indexPath) as? CustomTableViewCell else {
                 return UITableViewCell()
             }
-        
-        let user = users[indexPath.row]
-        cell.labelText.text = user.name
-        cell.fotoView.image = UIImage(systemName: "person.circle")
-        return cell
-            
+
             let item = items[indexPath.row]
             cell.labelText.text = item.text
             cell.fotoView.image = UIImage(named: item.imageName)
-            
+
             return cell
         }
         
-        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             return items.count
         }
         
-        func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
             return 10  // Espaciado deseado entre celdas
         }
 }

@@ -27,10 +27,9 @@
                                     <constraint firstAttribute="width" constant="200" id="VaB-eh-l6A"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ylv-Ur-EEl">
-                                <rect key="frame" x="190" y="99" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ylv-Ur-EEl">
+                                <rect key="frame" x="30" y="99" width="354" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="42" id="0hT-yj-Kgq"/>
                                     <constraint firstAttribute="height" constant="21" id="guy-s1-HoD"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -43,12 +42,13 @@
                         <constraints>
                             <constraint firstItem="nCB-O9-cMM" firstAttribute="top" secondItem="2Gb-Kc-0Hy" secondAttribute="top" constant="248" id="70T-CG-HjH"/>
                             <constraint firstItem="Ylv-Ur-EEl" firstAttribute="top" secondItem="2Gb-Kc-0Hy" secondAttribute="top" constant="11" id="9lX-FY-u1B"/>
-                            <constraint firstItem="Ylv-Ur-EEl" firstAttribute="leading" secondItem="2Gb-Kc-0Hy" secondAttribute="leading" constant="190" id="BmB-Mf-7WV"/>
                             <constraint firstItem="nCB-O9-cMM" firstAttribute="top" secondItem="0ym-gJ-lxR" secondAttribute="bottom" constant="8" id="Cz2-Hr-bZa"/>
                             <constraint firstItem="2Gb-Kc-0Hy" firstAttribute="bottom" secondItem="nCB-O9-cMM" secondAttribute="bottom" constant="-35" id="GUT-e1-kXQ"/>
                             <constraint firstItem="2Gb-Kc-0Hy" firstAttribute="trailing" secondItem="nCB-O9-cMM" secondAttribute="trailing" id="M9Q-Qx-ddv"/>
+                            <constraint firstItem="2Gb-Kc-0Hy" firstAttribute="trailing" secondItem="Ylv-Ur-EEl" secondAttribute="trailing" constant="30" id="Xkl-hX-pPT"/>
                             <constraint firstItem="0ym-gJ-lxR" firstAttribute="leading" secondItem="2Gb-Kc-0Hy" secondAttribute="leading" constant="111" id="go4-Hn-Ocv"/>
                             <constraint firstItem="nCB-O9-cMM" firstAttribute="leading" secondItem="2Gb-Kc-0Hy" secondAttribute="leading" id="tHq-0Y-LPm"/>
+                            <constraint firstItem="Ylv-Ur-EEl" firstAttribute="leading" secondItem="2Gb-Kc-0Hy" secondAttribute="leading" constant="30" id="xn3-Hn-9ti"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vvN-TY-AJA"/>

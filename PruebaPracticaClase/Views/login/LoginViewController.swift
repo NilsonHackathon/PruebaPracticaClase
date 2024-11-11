@@ -23,6 +23,7 @@ class LoginViewController: UIViewController {
         passwordTextField.accessibilityIdentifier = "passwordTextField"
         loginButton.accessibilityIdentifier = "loginButton"
         registerButton.accessibilityIdentifier = "registerButtonOnLogin"
+        
     }
     
     func authenticateUser(username: String, password: String) -> Bool {
@@ -31,17 +32,25 @@ class LoginViewController: UIViewController {
     
     func performLogin(username: String? = nil, password: String? = nil) {
         let enteredUsername = username ?? userTextField.text ?? ""
-        let enteredPassword = password ?? passwordTextField.text ?? ""
-        
-        guard authenticateUser(username: enteredUsername, password: enteredPassword)
-        else{
-            print("Credenciales incorrectas")
-            return
-        }
-        
-        //Ejecutamos el segue de la vista del main
-        print("Segue ejecutándose")
-        performSegue(withIdentifier: "goToMainView", sender: self)
+            let enteredPassword = password ?? passwordTextField.text ?? ""
+            
+            guard authenticateUser(username: enteredUsername, password: enteredPassword)
+            else {
+                print("Credenciales incorrectas")
+                showLoginErrorAlert()  // Muestra la alerta en caso de error
+                return
+            }
+            
+            // Ejecutamos el segue de la vista del main
+            print("Segue ejecutándose")
+            performSegue(withIdentifier: "goToMainView", sender: self)
+    }
+    
+    private func showLoginErrorAlert() {
+        let alert = UIAlertController(title: "Error", message: "Credenciales incorrectas", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        alert.view.accessibilityIdentifier = "loginErrorAlert"
+        present(alert, animated: true, completion: nil)
     }
     
     @IBAction func loginButtonAction(_ sender: Any) {

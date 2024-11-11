@@ -41,7 +41,7 @@ class UILoginTest: XCTestCase {
         XCTAssertTrue(exists, "El segue goToMainView debería haberse ejecutado correctamente y mostrar la vista de bienvenida.")
     }
     
-    func testLoginFailure() {
+    func testLoginFailureAlertExists() {
         let userTextField = app.textFields["userTextField"]
         let passwordTextField = app.textFields["passwordTextField"]
         let loginButton = app.buttons["loginButton"]
@@ -57,11 +57,10 @@ class UILoginTest: XCTestCase {
         XCTAssertTrue(loginButton.waitForExistence(timeout: 5), "loginButton no está disponible")
         loginButton.tap()
         
-        sleep(2)
+        // Verificar que la alerta de error aparece
+        let errorAlert = app.alerts["loginErrorAlert"]
         
-        let welcomeView = app.otherElements["welcomeView"]
-        let exists = welcomeView.waitForExistence(timeout: 5)
-        
-        XCTAssertFalse(exists, "WelcomeViewController no debería ser presentado con credenciales incorrectas.")
+        XCTAssertTrue(errorAlert.waitForExistence(timeout: 5), "Debería aparecer una alerta de error con credenciales incorrectas.")
     }
+    
 }
